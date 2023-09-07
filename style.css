@@ -61,6 +61,12 @@ ul {
     margin: 0 5%;
 }
 
+.product-price{
+    text-align: center;
+    margin: 10px 0;
+    font-size: 25px;
+}
+
 .product-info {
     text-align: center;
     margin: 5px 0px 15px;
@@ -123,8 +129,7 @@ ul {
     justify-content: center;
 }
 
-#confirmOrder,
-#okButton{
+#confirmOrder{
     font-family: 'Philosopher', sans-serif;
     font-size: 16px;
     width: 100%;
@@ -136,7 +141,8 @@ ul {
 }
 
 
-#orderInfo{
+#orderInfo, 
+#ordersInfo{
     grid-area: orderInfo;
     display: none;
     text-align: center;
@@ -145,7 +151,8 @@ ul {
 }
 
 #orderForm h2,
-#orderInfo h2{
+#orderInfo h2,
+#ordersInfo h2{
     max-width: 80%;
     margin: 15px 10%;
 }
@@ -155,13 +162,39 @@ ul {
     margin: 15px 10%;
 }
 
-#okButton{
-    display: none;
-    width: 80%;
-    margin: 20px 10%;
+#okButton, #myOrdersButton, #deleteOrderButton{
+    font-family: 'Philosopher', sans-serif;
+    font-size: 16px;
+    width: 100%;
+    line-height: 24px;
+    border-radius: 0%;
+    border: solid 1px #000000;
+    background-color: #ececec;
+    margin: 5px 0;
 }
-
+#deleteOrderButton{
+    width: 50%;
+}
 #confirmOrder:active,
-#okButton:active{
+#okButton:active, 
+#myOrdersButton:active,
+#deleteOrderButton:active{
     background-color:#d7d7d7;
 }
+
+#okButton{
+    display: none;
+}
+
+#orderList .orderItem{
+    margin: 10px 0;
+}
+
+.orderItem:hover{
+    color: rgb(108, 108, 108);
+}
+
+#myOrderInfo div{
+    margin: 5px 0;
+}
+
