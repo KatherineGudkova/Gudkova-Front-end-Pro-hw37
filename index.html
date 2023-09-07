@@ -9,6 +9,7 @@
 </head>
 
 <body>
+    <button id="myOrdersButton">МОЇ ЗАМОВЛЕННЯ</button>
     <div id="container">
         <div id="categories">
             <ul>
@@ -24,11 +25,11 @@
             <h2>ОФОРМЛЕННЯ ЗАМОВЛЕННЯ</h2>
             <form id="newForm">
                 <div class="form-element">
-                    <label for="fullName">ПІБ покупця:</label>
+                    <label for="fullName">ПІБ покупця: <font color="red">*</font></label>
                     <input type="text" id="fullName" required>
                 </div>
                 <div class="form-element">
-                    <label for="city">Місто:</label>
+                    <label for="city">Місто: <font color="red">*</font></label>
                     <select id="city" required>
                         <option value="Kyiv">Київ</option>
                         <option value="Kharkiv">Харків</option>
@@ -45,11 +46,11 @@
                     </select>
                 </div>
                 <div class="form-element">
-                    <label for="delivery">Відділення Нової пошти:</label>
+                    <label for="delivery">Відділення Нової пошти: <font color="red">*</font></label>
                     <input type="text" id="delivery" required>
                 </div>
                 <div class="form-element">
-                    <label for="payment">Спосіб оплати:</label>
+                    <label for="payment">Спосіб оплати: <font color="red">*</font></label>
                     <div class="pay">
                         <input type="radio" id="paymentCash" name="payment" value="cash" required>
                         <label for="paymentCash">Післяплата</label>
@@ -60,7 +61,7 @@
                     </div>
                 </div>
                 <div class="form-element">
-                    <label for="quantity">Кількість товару:</label>
+                    <label for="quantity">Кількість товару: <font color="red">*</font></label>
                     <input type="number" id="quantity" min="1" required>
                 </div>
                 <div class="form-element">
@@ -75,9 +76,16 @@
         <div id="orderInfo">
             <h2>ІНФОРМАЦІЯ ПРО ЗАМОВЛЕННЯ</h2>
             <div id="orderDetails"></div>
-            <button id="okButton">ОК</button>
+        </div>
+        <div id="ordersInfo">
+            <div id="myOrders">
+                <h2>МОЇ ЗАМОВЛЕННЯ</h2>
+                <ul id="orderList"></ul>
+            </div>
+            <div id="myOrderInfo"></div>
         </div>
     </div>
+    <button id="okButton">ГОЛОВНЕ МЕНЮ</button>
     <script src="/js/script.js"></script>
 </body>
 
