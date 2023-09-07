@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework 35</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="container">
+        <div id="categories">
+            <ul>
+                <li class="category" data-category="ОДЯГ">ОДЯГ</li>
+                <li class="category" data-category="ВЗУТТЯ">ВЗУТТЯ</li>
+                <li class="category" data-category="РЮКЗАКИ ТА СУМКИ">РЮКЗАКИ ТА СУМКИ</li>
+                <li class="category" data-category="АКСЕСУАРИ">АКСЕСУАРИ</li>
+            </ul>
+        </div>
+        <div id="products"></div>
+        <div id="productInfo"></div>
+        <div id="orderForm">
+            <h2>ОФОРМЛЕННЯ ЗАМОВЛЕННЯ</h2>
+            <form id="newForm">
+                <div class="form-element">
+                    <label for="fullName">ПІБ покупця:</label>
+                    <input type="text" id="fullName" required>
+                </div>
+                <div class="form-element">
+                    <label for="city">Місто:</label>
+                    <select id="city" required>
+                        <option value="Kyiv">Київ</option>
+                        <option value="Kharkiv">Харків</option>
+                        <option value="Odesa">Одеса</option>
+                        <option value="Dnipro">Дніпро</option>
+                        <option value="Zaporizhzhia">Запоріжжя</option>
+                        <option value="Lviv">Львів</option>
+                        <option value="Kryvyi-Rih">Кривий Ріг</option>
+                        <option value="Mykolaiv">Миколаїв</option>
+                        <option value="Luhansk">Луганськ</option>
+                        <option value="Vinnytsia">Вінниця</option>
+                        <option value="Chernihiv">Чернігів</option>
+                        <option value="Another">Інше місто</option>
+                    </select>
+                </div>
+                <div class="form-element">
+                    <label for="delivery">Відділення Нової пошти:</label>
+                    <input type="text" id="delivery" required>
+                </div>
+                <div class="form-element">
+                    <label for="payment">Спосіб оплати:</label>
+                    <div class="pay">
+                        <input type="radio" id="paymentCash" name="payment" value="cash" required>
+                        <label for="paymentCash">Післяплата</label>
+                    </div>
+                    <div class="pay">
+                        <input type="radio" id="paymentCard" name="payment" value="card" required>
+                        <label for="paymentCard">Банківська картка</label>
+                    </div>
+                </div>
+                <div class="form-element">
+                    <label for="quantity">Кількість товару:</label>
+                    <input type="number" id="quantity" min="1" required>
+                </div>
+                <div class="form-element">
+                    <label for="comment">Коментар до замовлення:</label>
+                    <textarea id="comment"></textarea>
+                </div>
+                <div class="form-element" id="confirmOrderElement">
+                    <button id="confirmOrder">ПІДТВЕРДИТИ ЗАМОВЛЕННЯ</button>
+                </div>
+                </form>
+        </div>
+        <div id="orderInfo">
+            <h2>ІНФОРМАЦІЯ ПРО ЗАМОВЛЕННЯ</h2>
+            <div id="orderDetails"></div>
+            <button id="okButton">ОК</button>
+        </div>
+    </div>
+    <script src="/js/script.js"></script>
+</body>
+
+</html>
